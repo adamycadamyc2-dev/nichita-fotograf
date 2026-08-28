@@ -93,9 +93,37 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-primary">
+    // ИСПРАВЛЕНИЕ 1: min-h-[100dvh] вместо min-h-screen для корректной работы на мобильных
+    <div className="min-h-[100dvh] bg-primary overflow-x-hidden">
+      
+      {/* SEO: Структурированные данные для Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Photographer',
+            name: 'Adamco Nichita',
+            description: 'Профессиональный фотограф в Бельцах, Молдова',
+            url: 'https://nichita-fotograf.vercel.app',
+            telephone: '+37369418887',
+            email: 'admumcodao2@gmail.com',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Бельцы',
+              addressCountry: 'MD'
+            },
+            sameAs: [
+              'https://www.instagram.com/nichita_fotograf/',
+              'https://t.me/Nikita_adamco'
+            ],
+            priceRange: '250-1500 MDL'
+          })
+        }}
+      />
+
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-line">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <a href="/" className="font-serif text-2xl text-text-primary tracking-tight transition-colors hover:text-accent">AN</a>
             <nav className="hidden md:flex items-center gap-8">
@@ -122,7 +150,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
+      <div className={`fixed inset-0 z-40 bg-primary flex flex-col items-center justify-center p-8 transition-transform duration-300 ${mobileMenuOpen ? 'translate-y-0' : 'translate-y-full'}`}>
         <button className="absolute top-6 right-6 text-text-primary p-2" onClick={() => setMobileMenuOpen(false)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
@@ -130,17 +158,19 @@ export default function Home() {
           <Link href="/ru" className="px-4 py-2 text-sm border border-line hover:border-accent">RU</Link>
           <Link href="/ro" className="px-4 py-2 text-sm border border-line hover:border-accent">RO</Link>
         </div>
-        <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-2xl">{t('nav.portfolio')}</a>
-        <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl">{t('nav.pricing')}</a>
-        <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-2xl">{t('nav.about')}</a>
-        <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl">{t('nav.services')}</a>
-        <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl">{t('nav.contact')}</a>
-        <button onClick={() => { setMobileMenuOpen(false); scrollToBooking(); }} className="btn-primary mt-8">{t('nav.book')}</button>
+        <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-2xl mb-4">{t('nav.portfolio')}</a>
+        <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl mb-4">{t('nav.pricing')}</a>
+        <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-2xl mb-4">{t('nav.about')}</a>
+        <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl mb-4">{t('nav.services')}</a>
+        <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl mb-8">{t('nav.contact')}</a>
+        <button onClick={() => { setMobileMenuOpen(false); scrollToBooking(); }} className="btn-primary w-full">{t('nav.book')}</button>
       </div>
 
-      <section className="relative min-h-screen pt-20">
-        <div className="container h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 min-h-[calc(100vh-80px)] items-center py-12 lg:py-0">
+      {/* ИСПРАВЛЕНИЕ 2: min-h-[100dvh] для секции Hero */}
+      <section className="relative min-h-[100dvh] pt-20">
+        <div className="container mx-auto px-4 h-full">
+          {/* ИСПРАВЛЕНИЕ 3: calc(100dvh-80px) вместо calc(100vh-80px) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 min-h-[calc(100dvh-80px)] items-center py-12 lg:py-0">
             <div className="lg:col-span-6 flex flex-col justify-center">
               <p className="eyebrow mb-8 fade-in">{t('common.title')} · {t('common.location')}</p>
               <h1 className="fade-in fade-in-1" style={{ fontSize: 'clamp(52px, 6vw, 96px)', lineHeight: '0.95' }}>
@@ -163,7 +193,7 @@ export default function Home() {
       </section>
 
       <section id="work" className="section bg-primary">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-24 gap-6">
             <div>
               <p className="eyebrow mb-4 fade-in">01 — {t('portfolio.title')}</p>
@@ -202,7 +232,7 @@ export default function Home() {
       </section>
 
       <section id="pricing" className="section bg-primary-light">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="mb-16 md:mb-24">
             <p className="eyebrow mb-4 fade-in">02 — {t('pricing.title')}</p>
             <h2 className="text-text-primary max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: '1.0' }}>{t('pricing.subtitle')}</h2>
@@ -234,7 +264,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="section bg-primary">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5 fade-in">
               <div className="relative aspect-[3/4] image-hover overflow-hidden rounded-sm photo-placeholder">
@@ -260,7 +290,7 @@ export default function Home() {
       </section>
 
       <section id="services" className="section bg-primary-light">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="mb-16 md:mb-24">
             <p className="eyebrow mb-4 fade-in">04 — {t('services.title')}</p>
             <h2 className="text-text-primary max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: '1.0' }}>{t('services.subtitle')}</h2>
@@ -287,7 +317,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="section bg-primary">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="eyebrow mb-8 fade-in">05 — {t('contact.title')}</p>
             <h2 className="text-text-primary mb-12 leading-tight fade-in fade-in-1" style={{ fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: '1.05' }}>
@@ -326,7 +356,7 @@ export default function Home() {
       </section>
 
       <section id="booking" className="section bg-primary-light">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <p className="eyebrow mb-4 fade-in text-center">06 — {t('contact.booking_title') || 'Записаться'}</p>
             <h2 className="text-text-primary mb-12 text-center fade-in fade-in-1" style={{ fontSize: 'clamp(32px, 4vw, 56px)', lineHeight: '1.05' }}>{t('contact.booking_title') || 'Записаться на съёмку'}</h2>
@@ -404,7 +434,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-line py-12 bg-primary">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <button onClick={() => scrollToBooking()} className="camera-icon group flex items-center gap-3 transition-all duration-300 hover:scale-110" aria-label="Записаться">
               <svg className="w-8 h-8 text-text-secondary group-hover:text-accent transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
