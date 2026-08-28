@@ -139,7 +139,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 min-h-[calc(100dvh-120px)] items-center py-12 lg:py-0">
             <div className="lg:col-span-6 flex flex-col justify-center">
               <p className="eyebrow mb-6 md:mb-8 fade-in">{t('common.title')} · {t('common.location')}</p>
-              <h1 className="fade-in fade-in-1 font-serif" style={{ fontSize: 'clamp(48px, 8vw, 96px)', lineHeight: '0.95' }}>
+              <h1 className="fade-in fade-in-1 font-serif" style={{ fontSize: 'clamp(48px, 8vw, 96px)', lineHeight: '1.15' }}>
                 <span className="block text-text-primary">Adamco</span>
                 <span className="block text-text-secondary">Nichita</span>
               </h1>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 md:mb-24 gap-6">
             <div>
               <p className="eyebrow mb-4 fade-in">01 — {t('portfolio.title')}</p>
-              <h2 className="text-text-primary font-serif fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.0' }}>{t('portfolio.subtitle')}</h2>
+              <h2 className="text-text-primary font-serif fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.2' }}>{t('portfolio.subtitle')}</h2>
             </div>
             <a href="#work" className="btn-secondary btn-compact fade-in fade-in-2 self-start md:self-auto"><span>{t('portfolio.view_all')}</span></a>
           </div>
@@ -179,7 +179,7 @@ export default function Home() {
                       <Image src={imgSrc} alt={t(`portfolio.categories.${key}`)} fill className="object-cover" sizes="(max-width: 768px) 100vw, 90vw" />
                       <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10"><span className="eyebrow text-text-primary/70 bg-primary/50 px-2 py-1 rounded-sm backdrop-blur-sm">0{index + 1}</span></div>
                     </div>
-                    <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.1' }}>{t(`portfolio.categories.${key}`)}</h3>
+                    <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.35' }}>{t(`portfolio.categories.${key}`)}</h3>
                   </div>
                 );
               }
@@ -189,7 +189,7 @@ export default function Home() {
                     <Image src={imgSrc} alt={t(`portfolio.categories.${key}`)} fill className="object-cover" sizes={isLarge ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"} />
                     <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10"><span className="eyebrow text-text-primary/70 bg-primary/50 px-2 py-1 rounded-sm backdrop-blur-sm">0{index + 1}</span></div>
                   </div>
-                  <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.1' }}>{t(`portfolio.categories.${key}`)}</h3>
+                  <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.35' }}>{t(`portfolio.categories.${key}`)}</h3>
                 </div>
               );
             })}
@@ -201,7 +201,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="mb-12 md:mb-24">
             <p className="eyebrow mb-4 fade-in">02 — {t('pricing.title')}</p>
-            <h2 className="text-text-primary font-serif max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.0' }}>{t('pricing.subtitle')}</h2>
+            <h2 className="text-text-primary font-serif max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.2' }}>{t('pricing.subtitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {serviceKeys.map((key, index) => {
@@ -211,7 +211,7 @@ export default function Home() {
                   <div className="flex items-start justify-between mb-6 gap-4">
                     <div className="flex-1">
                       <span className="eyebrow text-text-muted mb-3 block">0{index + 1}</span>
-                      <h3 className="text-text-primary font-serif" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.1' }}>{t(`pricing.items.${key}.title`)}</h3>
+                      <h3 className="text-text-primary font-serif" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: '1.35' }}>{t(`pricing.items.${key}.title`)}</h3>
                     </div>
                     <div className="text-right flex-shrink-0">
                       <div className="flex items-baseline gap-2">
@@ -239,7 +239,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center">
               <p className="eyebrow mb-6 fade-in">03 — {t('about.title')}</p>
-              <h2 className="text-text-primary font-serif mb-6 fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.0' }}>{t('about.name')}</h2>
+              <h2 className="text-text-primary font-serif mb-6 fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.2' }}>{t('about.name')}</h2>
               <p className="text-text-secondary mb-8 md:mb-10 fade-in fade-in-2 text-lg">{t('about.profession')}</p>
               <div className="space-y-6 text-text-secondary text-base md:text-lg leading-relaxed max-w-xl">
                 <p className="fade-in fade-in-2">{t('about.text1')}</p>
@@ -259,7 +259,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="mb-12 md:mb-24">
             <p className="eyebrow mb-4 fade-in">04 — {t('services.title')}</p>
-            <h2 className="text-text-primary font-serif max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.0' }}>{t('services.subtitle')}</h2>
+            <h2 className="text-text-primary font-serif max-w-3xl fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.2' }}>{t('services.subtitle')}</h2>
           </div>
           <div className="border-t border-line">
             {serviceKeys.map((key, index) => (
@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="grid grid-cols-12 gap-4 items-center">
                   <div className="col-span-1"><span className="eyebrow text-text-muted">0{index + 1}</span></div>
                   <div className="col-span-11 md:col-span-5">
-                    <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 44px)', lineHeight: '1.1' }}>{t(`services.items.${key}.title`)}</h3>
+                    <h3 className="text-text-primary font-serif group-hover:text-accent transition-colors" style={{ fontSize: 'clamp(24px, 3vw, 44px)', lineHeight: '1.35' }}>{t(`services.items.${key}.title`)}</h3>
                   </div>
                   <div className="col-span-12 md:col-span-5 md:col-start-7 mt-2 md:mt-0">
                     <p className="text-text-primary/80 text-sm md:text-base leading-relaxed max-w-lg">{t(`services.items.${key}.description`)}</p>
@@ -286,7 +286,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <p className="eyebrow mb-8 fade-in">05 — {t('contact.title')}</p>
-            <h2 className="text-text-primary font-serif mb-12 leading-tight fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.05' }}>
+            <h2 className="text-text-primary font-serif mb-12 leading-tight fade-in fade-in-1" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: '1.25' }}>
               {t('contact.headline')}<br /><span className="text-text-secondary">{t('contact.headline2')}</span>
             </h2>
             <p className="text-text-secondary mb-12 fade-in fade-in-2 max-w-2xl mx-auto">{t('contact.description')}</p>
@@ -325,7 +325,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto">
             <p className="eyebrow mb-4 fade-in text-center">06 — {t('contact.booking_title') || 'Записаться'}</p>
-            <h2 className="text-text-primary font-serif mb-12 text-center fade-in fade-in-1" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '1.05' }}>{t('contact.booking_title') || 'Записаться на съёмку'}</h2>
+            <h2 className="text-text-primary font-serif mb-12 text-center fade-in fade-in-1" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '1.25' }}>{t('contact.booking_title') || 'Записаться на съёмку'}</h2>
 
             {formSent ? (
               <div className="text-center p-12 border border-accent/40 rounded-sm fade-in bg-primary">
