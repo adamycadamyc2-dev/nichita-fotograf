@@ -5,8 +5,7 @@
     "about": "Despre mine",
     "services": "Servicii",
     "contact": "Contacte",
-    "book": "Programează",
-    "testimonials": "Recenzii"
+    "book": "Programează"
   },
   "common": {
     "title": "Fotograf",
@@ -78,9 +77,5 @@
     "phone": "Telefon",
     "email": "Email",
     "booking_title": "Programează o ședință"
-  },
-  "testimonials": {
-    "title": "Recenzii",
-    "subtitle": "Ce spun clienții mei"
   }
 }
