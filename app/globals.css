@@ -29,6 +29,9 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Анимации */
@@ -133,4 +136,86 @@ a:hover {
 
 .mobile-menu.active {
   transform: translateY(0);
+}
+
+/* ИСПРАВЛЕНИЕ 1: Анимированная камера в футере */
+.camera-icon {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.camera-icon:hover {
+  transform: scale(1.1);
+}
+
+.camera-icon svg {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* ИСПРАВЛЕНИЕ 2: Наложение элементов */
+.service-row {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+  border-bottom: 1px solid #222222;
+}
+
+.service-row h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+#services .container {
+  position: relative;
+  z-index: 1;
+}
+
+#work .container {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-placeholder .eyebrow {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.125rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ИСПРАВЛЕНИЕ 3: Качество текста */
+.eyebrow,
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Чёткие цифры */
+.eyebrow {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
 }
