@@ -10,7 +10,7 @@
   --color-line: #222222;
   
   /* Привязка к шрифтам из Next.js layout.tsx */
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
 }
 
@@ -34,6 +34,24 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* ВАЖНО: Исправление отображения шрифтов */
+body {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Анимации */
@@ -72,6 +90,7 @@ button, .btn-primary {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  line-height: 1.4;
 }
 
 button:hover, .btn-primary:hover {
@@ -93,6 +112,7 @@ button:hover, .btn-primary:hover {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  line-height: 1.4;
 }
 
 .btn-secondary:hover {
@@ -200,6 +220,7 @@ a:hover {
   z-index: 2;
   margin: 0;
   padding: 0;
+  line-height: 1.2;
 }
 
 #services .container,
@@ -224,17 +245,14 @@ a:hover {
 }
 
 /* Типографика */
-.eyebrow, h1, h2, h3, h4, h5, h6 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .eyebrow {
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-size: 0.75rem;
   color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  line-height: 1.4;
 }
 
 /* Карточки контактов */
