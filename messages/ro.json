@@ -38,41 +38,13 @@
     "currency": "MDL",
     "book": "Programează",
     "items": {
-      "portrait": {
-        "title": "Portret",
-        "price": "250",
-        "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase."
-      },
-      "lovestory": {
-        "title": "Poveste de dragoste",
-        "price": "400",
-        "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre."
-      },
-      "family": {
-        "title": "Ședință de familie",
-        "price": "500",
-        "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii."
-      },
-      "birthday": {
-        "title": "Zi de naștere",
-        "price": "900",
-        "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii."
-      },
-      "reportage": {
-        "title": "Reportaj",
-        "price": "1000",
-        "description": "Fotografiere dinamică a evenimentelor și momentelor importante fără regie."
-      },
-      "baptism": {
-        "title": "Botez",
-        "price": "1200",
-        "description": "Însoțire foto completă a ceremoniei de botez."
-      },
-      "commercial": {
-        "title": "Ședință comercială",
-        "price": "1500",
-        "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale."
-      }
+      "portrait": { "title": "Portret", "price": "250", "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase." },
+      "lovestory": { "title": "Poveste de dragoste", "price": "400", "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre." },
+      "family": { "title": "Ședință de familie", "price": "500", "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii." },
+      "birthday": { "title": "Zi de naștere", "price": "900", "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii." },
+      "reportage": { "title": "Reportaj", "price": "1000", "description": "Fotografiere dinamică a evenimentelor și momentelor importante fără regie." },
+      "baptism": { "title": "Botez", "price": "1200", "description": "Însoțire foto completă a ceremoniei de botez." },
+      "commercial": { "title": "Ședință comercială", "price": "1500", "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale." }
     }
   },
   "about": {
@@ -89,34 +61,13 @@
     "title": "Servicii",
     "subtitle": "Direcții de lucru",
     "items": {
-      "portrait": {
-        "title": "Portret",
-        "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase."
-      },
-      "lovestory": {
-        "title": "Poveste de dragoste",
-        "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre."
-      },
-      "family": {
-        "title": "Ședință de familie",
-        "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii."
-      },
-      "birthday": {
-        "title": "Zi de naștere",
-        "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii."
-      },
-      "reportage": {
-        "title": "Reportaj",
-        "description": "Fotografiere dinamică a evenimentelor și momentelor importante fără regie."
-      },
-      "baptism": {
-        "title": "Botez",
-        "description": "Însoțire foto completă a ceremoniei de botez."
-      },
-      "commercial": {
-        "title": "Ședință comercială",
-        "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale."
-      }
+      "portrait": { "title": "Portret", "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase." },
+      "lovestory": { "title": "Poveste de dragoste", "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre." },
+      "family": { "title": "Ședință de familie", "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii." },
+      "birthday": { "title": "Zi de naștere", "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii." },
+      "reportage": { "title": "Reportaj", "description": "Fotografiere dinamică a evenimentelor și momentelor importante fără regie." },
+      "baptism": { "title": "Botez", "description": "Însoțire foto completă a ceremoniei de botez." },
+      "commercial": { "title": "Ședință comercială", "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale." }
     }
   },
   "contact": {
