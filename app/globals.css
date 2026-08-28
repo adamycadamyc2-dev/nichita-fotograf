@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* Определяем цвета для Tailwind v4 */
+@theme {
+  --color-primary: #0a0a0a;
+  --color-primary-light: #111111;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #888888;
+  --color-text-muted: #666666;
+  --color-accent: #d4af37;
+  --color-line: #222222;
+}
+
+/* Базовые стили */
 html {
   scroll-behavior: smooth;
 }
@@ -7,12 +19,19 @@ html {
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Анимации */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -31,4 +50,87 @@ html, body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Стили для кнопок */
+button, .btn-primary {
+  background-color: #d4af37;
+  color: #0a0a0a;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+button:hover, .btn-primary:hover {
+  background-color: rgba(212, 175, 55, 0.9);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #222222;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* Ссылки */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #d4af37;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Секции */
+.section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
 }
