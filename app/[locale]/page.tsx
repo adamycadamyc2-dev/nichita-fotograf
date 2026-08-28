@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -52,7 +52,7 @@ export default function Home() {
     }, 100);
   };
 
-  const handleBookingSubmit = async (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
