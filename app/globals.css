@@ -1,8 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Базовые стили для корректной прокрутки на мобильных */
+/* Кастомные цвета и шрифты для Tailwind v4 */
+@theme {
+  --color-primary: #0a0a0a;
+  --color-primary-light: #111111;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #888888;
+  --color-text-muted: #666666;
+  --color-accent: #d4af37;
+  --color-line: #222222;
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Базовые стили для корректной работы на мобильных */
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -12,10 +24,25 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Плавная прокрутка */
+* {
+  scroll-behavior: smooth;
 }
 
 /* Анимации fade-in */
@@ -25,33 +52,180 @@ body {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-.fade-in-1 {
-  animation-delay: 0.1s;
-}
-
-.fade-in-2 {
-  animation-delay: 0.2s;
-}
-
-.fade-in-3 {
-  animation-delay: 0.3s;
-}
-
-.fade-in-4 {
-  animation-delay: 0.4s;
-}
-
-.fade-in-5 {
-  animation-delay: 0.5s;
-}
-
-.fade-in-6 {
-  animation-delay: 0.6s;
-}
+.fade-in-1 { animation-delay: 0.1s; }
+.fade-in-2 { animation-delay: 0.2s; }
+.fade-in-3 { animation-delay: 0.3s; }
+.fade-in-4 { animation-delay: 0.4s; }
+.fade-in-5 { animation-delay: 0.5s; }
+.fade-in-6 { animation-delay: 0.6s; }
 
 @keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Утилиты */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Секции */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Кнопки */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: 0.125rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: rgba(212, 175, 55, 0.9);
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-line);
+  padding: 1rem 2rem;
+  border-radius: 0.125rem;
+  color: var(--color-text-primary);
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-compact {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Eyebrow текст */
+.eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+/* Hover эффекты для изображений */
+.image-hover {
+  transition: transform 0.5s;
+}
+
+.image-hover:hover {
+  transform: scale(1.02);
+}
+
+/* Фото placeholder */
+.photo-placeholder {
+  background-color: var(--color-primary-light);
+}
+
+/* Карточки контактов */
+.contact-card {
+  transition: all 0.3s;
+}
+
+.contact-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Строки услуг */
+.service-row {
+  transition: all 0.3s;
+  border-bottom: 1px solid var(--color-line);
+  cursor: pointer;
+}
+
+.service-row:hover {
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+/* Карточки цен */
+.pricing-card {
+  border: 1px solid var(--color-line);
+  background-color: var(--color-primary);
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.pricing-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+}
+
+/* Иконка камеры */
+.camera-icon {
+  transition: all 0.3s;
+}
+
+.camera-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+/* Стрелка */
+.arrow {
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover .arrow {
+  transform: translateX(4px);
 }
