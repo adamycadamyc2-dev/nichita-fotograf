@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Определяем цвета для Tailwind v4 */
 @theme {
   --color-primary: #0a0a0a;
   --color-primary-light: #111111;
@@ -9,9 +8,11 @@
   --color-text-muted: #666666;
   --color-accent: #d4af37;
   --color-line: #222222;
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
-/* Базовые стили */
 html {
   scroll-behavior: smooth;
 }
@@ -34,7 +35,6 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-/* Анимации */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -55,7 +55,6 @@ html, body {
   }
 }
 
-/* Стили для кнопок */
 button, .btn-primary {
   background-color: #d4af37;
   color: #0a0a0a;
@@ -87,7 +86,6 @@ button:hover, .btn-primary:hover {
   color: #d4af37;
 }
 
-/* Ссылки */
 a {
   color: #ffffff;
   text-decoration: none;
@@ -98,7 +96,6 @@ a:hover {
   color: #d4af37;
 }
 
-/* Контейнер */
 .container {
   width: 100%;
   max-width: 1280px;
@@ -108,7 +105,6 @@ a:hover {
   padding-right: 1rem;
 }
 
-/* Секции */
 .section {
   padding: 4rem 0;
 }
@@ -119,7 +115,6 @@ a:hover {
   }
 }
 
-/* Мобильное меню */
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -138,7 +133,6 @@ a:hover {
   transform: translateY(0);
 }
 
-/* ИСПРАВЛЕНИЕ 1: Анимированная камера в футере */
 .camera-icon {
   background: transparent !important;
   border: none !important;
@@ -169,7 +163,6 @@ a:hover {
   }
 }
 
-/* ИСПРАВЛЕНИЕ 2: Наложение элементов */
 .service-row {
   position: relative;
   z-index: 1;
@@ -184,11 +177,7 @@ a:hover {
   padding: 0;
 }
 
-#services .container {
-  position: relative;
-  z-index: 1;
-}
-
+#services .container,
 #work .container {
   position: relative;
   z-index: 1;
@@ -207,15 +196,22 @@ a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ИСПРАВЛЕНИЕ 3: Качество текста */
-.eyebrow,
-h1, h2, h3, h4, h5, h6 {
+.eyebrow, h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Чёткие цифры */
 .eyebrow {
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.1em;
+}
+
+.testimonial-card {
+  transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
 }

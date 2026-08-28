@@ -1,123 +1,105 @@
 {
-  "common": {
-    "name": "Adamco Nichita",
-    "title": "Fotograf",
-    "location": "Moldova",
-    "tagline": "Păstrez momentele care nu se pot repeta."
-  },
   "nav": {
-    "home": "Acasă",
     "portfolio": "Portofoliu",
     "pricing": "Prețuri",
     "about": "Despre mine",
     "services": "Servicii",
-    "contact": "Contact",
-    "book": "Programare",
-    "menu": "Meniu",
-    "close": "Închide"
+    "contact": "Contacte",
+    "book": "Programează",
+    "testimonials": "Recenzii"
   },
-  "lang": {
-    "ru": "RU",
-    "ro": "RO"
+  "common": {
+    "title": "Fotograf",
+    "location": "Moldova",
+    "tagline": "Păstrez momentele care nu se pot repeta."
   },
   "hero": {
     "cta_primary": "Programează o ședință",
     "cta_secondary": "Vezi portofoliul"
   },
-  "offer": {
-    "label": "Ofertă specială",
-    "title": "Primele 3 ședințe foto —",
-    "title_accent": "GRATUIT",
-    "description": "Îmi lansez portofoliul și invit primii trei clienți la o ședință foto gratuită. Aceasta este șansa ta de a obține fotografii profesionale fără plată — doar programează-te și vino.",
-    "spots": "Locuri disponibile",
-    "cta": "Rezervă un loc"
-  },
   "portfolio": {
     "title": "Portofoliu",
     "subtitle": "Lucrări selectate",
     "view_all": "Toate lucrările",
-    "view_project": "Vezi proiectul",
     "categories": {
       "portrait": "Portret",
-      "lovestory": "Pereche / Love Story",
+      "lovestory": "Poveste de dragoste",
       "family": "Ședință de familie",
       "birthday": "Zi de naștere",
       "reportage": "Reportaj",
       "baptism": "Botez",
-      "commercial": "Comercial",
-      "animals": "Fotografie animale"
+      "commercial": "Ședință comercială",
+      "animals": "Animale"
     }
   },
   "pricing": {
     "title": "Prețuri",
-    "subtitle": "Costul serviciilor",
+    "subtitle": "Investiția în amintirile tale",
     "currency": "MDL",
-    "book": "Programare",
-    "note": "Costul exact depinde de complexitatea și volumul lucrării",
+    "book": "Programează",
     "items": {
       "portrait": {
         "title": "Portret",
         "price": "250",
-        "description": "Ședință foto individuală pentru a-ți crea imaginea și portrete frumoase."
+        "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase."
       },
       "lovestory": {
-        "title": "Pereche / Love Story",
+        "title": "Poveste de dragoste",
         "price": "400",
-        "description": "Ședință romantică pentru cuplu — emoții naturale, interacțiune și povestea relației voastre."
+        "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre."
       },
       "family": {
         "title": "Ședință de familie",
         "price": "500",
-        "description": "Ședință foto caldă de familie cu emoții naturale și momente vii."
+        "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii."
       },
       "birthday": {
         "title": "Zi de naștere",
         "price": "900",
-        "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii și momentele importante."
+        "description": "Fotografierea zilei de naștere pentru a păstra atmosfera sărbătorii."
       },
       "reportage": {
         "title": "Reportaj",
         "price": "1000",
-        "description": "Fotografiere dinamică a evenimentelor, sărbătorilor și momentelor importante fără regie."
+        "description": "Fotografiere dinamică a evenimentelor și momentelor importante fără regie."
       },
       "baptism": {
         "title": "Botez",
         "price": "1200",
-        "description": "Acoperire fotografică completă a ceremoniei de botez."
+        "description": "Însoțire foto completă a ceremoniei de botez."
       },
       "commercial": {
-        "title": "Fotografie comercială",
+        "title": "Ședință comercială",
         "price": "1500",
-        "description": "Fotografie pentru business, branduri, publicitate, rețele sociale și promovare."
+        "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale."
       }
     }
   },
   "about": {
     "title": "Despre mine",
-    "name": "Nichita",
-    "profession": "Fotograf · Moldova",
-    "text1": "Mă numesc Nichita, am 19 ani și sunt fotograf din Bălți.",
-    "text2": "Fotografia pentru mine este un mod de a păstra momentele, emoțiile și oamenii așa cum sunt în viață. Îmi place să lucrez cu lumină naturală, atmosferă și emoții vii, creând cadre pe care vrei să le revedei după un timp.",
-    "text3": "La ședință încerc să creez o atmosferă confortabilă, deci nu trebuie să știi să pozezi sau să te simți ca un model profesionist. Te voi ajuta cu pozele, îți voi spune ce să faci și voi încerca să fac procesul ușor și plăcut.",
-    "text4": "Pentru mine este important ca fotografiile să nu fie doar frumoase, ci să transmită exact povestea și starea ta.",
+    "name": "Adamco Nichita",
+    "profession": "Fotograf",
+    "text1": "Salut! Mă numesc Nichita și sunt fotograf profesionist din Bălți, Moldova.",
+    "text2": "Cred că fiecare fotografie ar trebui să spună o poveste. Lucrările mele nu sunt doar imagini, ci emoții adevărate înghețate în timp.",
+    "text3": "Sunt specializat în fotografia de portret, de familie și de nuntă. Fiecare proiect pentru mine este o oportunitate de a crea ceva unic și sincer.",
+    "text4": "Să creăm ceva frumos împreună!",
     "contact": "Contactează-mă"
   },
   "services": {
     "title": "Servicii",
     "subtitle": "Direcții de lucru",
-    "learn_more": "Mai multe detalii",
     "items": {
       "portrait": {
         "title": "Portret",
-        "description": "Ședință foto individuală pentru a-ți crea imaginea și portrete frumoase."
+        "description": "Ședință foto individuală pentru crearea imaginii tale și portrete frumoase."
       },
       "lovestory": {
-        "title": "Pereche / Love Story",
+        "title": "Poveste de dragoste",
         "description": "Ședință romantică pentru cuplu — emoții naturale și povestea relației voastre."
       },
       "family": {
         "title": "Ședință de familie",
-        "description": "Ședință foto caldă de familie cu emoții naturale și momente vii."
+        "description": "Ședință foto de familie călduroasă cu emoții naturale și momente vii."
       },
       "birthday": {
         "title": "Zi de naștere",
@@ -129,38 +111,25 @@
       },
       "baptism": {
         "title": "Botez",
-        "description": "Acoperire fotografică completă a ceremoniei de botez."
+        "description": "Însoțire foto completă a ceremoniei de botez."
       },
       "commercial": {
-        "title": "Fotografie comercială",
-        "description": "Fotografie pentru business, branduri, publicitate și rețele sociale."
+        "title": "Ședință comercială",
+        "description": "Fotografie pentru afaceri, branduri, publicitate și rețele sociale."
       }
     }
   },
   "contact": {
-    "title": "Contact",
-    "headline": "Hai să creăm",
-    "headline2": "ceva demn de ținut minte",
-    "description": "Contactează-mă prin orice metodă convenientă — răspund în decurs de o oră",
+    "title": "Contacte",
+    "headline": "Sunteți gata să rezervați",
+    "headline2": "ședința foto?",
+    "description": "Contactați-mă în orice mod convenabil — voi răspunde în curând.",
     "phone": "Telefon",
-    "telegram": "Telegram",
-    "instagram": "Instagram",
     "email": "Email",
-    "cta": "Programează o ședință",
-    "available": "Disponibil zilnic de la 9:00 până la 21:00",
-    "booking_title": "Programează o ședință",
-    "booking_name": "Numele tău",
-    "booking_phone": "Telefon",
-    "booking_date": "Data dorită",
-    "booking_service": "Tipul ședinței",
-    "booking_comment": "Comentariu",
-    "booking_submit": "Trimite cererea",
-    "booking_success": "Cererea a fost trimisă! Te voi contacta în curând."
+    "booking_title": "Programează o ședință"
   },
-  "footer": {
-    "tagline": "Păstrez momentele",
-    "location": "Bălți, Moldova",
-    "instagram": "Instagram",
-    "facebook": "Facebook"
+  "testimonials": {
+    "title": "Recenzii",
+    "subtitle": "Ce spun clienții mei"
   }
 }
