@@ -114,27 +114,32 @@ export default function Home() {
       />
 
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-line">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" className="font-serif text-2xl text-text-primary tracking-tight transition-colors hover:text-accent">AN</a>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#work" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.portfolio')}</a>
-              <a href="#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.pricing')}</a>
-              <a href="#about" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.about')}</a>
-              <a href="#services" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.services')}</a>
-              <a href="#contact" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.contact')}</a>
-            </nav>
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-1 border border-line rounded-sm overflow-hidden">
-                <Link href="/ru" className="px-3 py-1.5 text-xs tracking-wider transition-colors hover:bg-accent hover:text-primary">RU</Link>
-                <div className="w-px h-4 bg-line" />
-                <Link href="/ro" className="px-3 py-1.5 text-xs tracking-wider transition-colors hover:bg-accent hover:text-primary">RO</Link>
-              </div>
-              <button onClick={() => scrollToBooking()} className="btn-primary btn-compact">{t('nav.book')}</button>
-            </div>
-          </div>
+  <div className="container mx-auto px-4 sm:px-6">
+    <div className="flex items-center justify-between h-20">
+      <a href="/" className="font-serif text-2xl text-text-primary tracking-tight transition-colors hover:text-accent">AN</a>
+      <nav className="hidden md:flex items-center gap-8">
+        <a href="#work" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.portfolio')}</a>
+        <a href="#pricing" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.pricing')}</a>
+        <a href="#about" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.about')}</a>
+        <a href="#services" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.services')}</a>
+        <a href="#contact" className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300">{t('nav.contact')}</a>
+      </nav>
+      <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center gap-1 border border-line rounded-sm overflow-hidden">
+          <Link href="/ru" className="px-3 py-1.5 text-xs tracking-wider transition-colors hover:bg-accent hover:text-primary">RU</Link>
+          <div className="w-px h-4 bg-line" />
+          <Link href="/ro" className="px-3 py-1.5 text-xs tracking-wider transition-colors hover:bg-accent hover:text-primary">RO</Link>
         </div>
-      </header>
+        <button onClick={() => scrollToBooking()} className="btn-primary btn-compact">{t('nav.book')}</button>
+      </div>
+      {/* МОБИЛЬНЫЙ ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ */}
+      <div className="flex md:hidden items-center gap-2">
+        <Link href="/ru" className="px-2 py-1 text-xs border border-line rounded-sm transition-colors hover:bg-accent hover:text-primary">RU</Link>
+        <Link href="/ro" className="px-2 py-1 text-xs border border-line rounded-sm transition-colors hover:bg-accent hover:text-primary">RO</Link>
+      </div>
+    </div>
+  </div>
+</header>
 
       <section className="relative min-h-[100dvh] pt-28 md:pt-32">
         <div className="container mx-auto px-4 sm:px-6 h-full">
